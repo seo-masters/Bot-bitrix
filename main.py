@@ -10,6 +10,7 @@ conexion = sqlite3.connect('bitrix_bot.db')
 cursor = conexion.cursor()         
 cursor.execute('CREATE TABLE IF NOT EXISTS leads (id INTEGER PRIMARY KEY, employee TEXT, phone TEXT, call_date TEXT, status TEXT, day TEXT)')
 
+#Esto recolecta las fechas
 fecha_actual = datetime.datetime.now()
 fecha_formateada = fecha_actual.strftime("%d/%m/%Y")
 
