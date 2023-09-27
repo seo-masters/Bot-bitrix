@@ -1,3 +1,10 @@
+"""
+Módulo: main.py
+Autor: Daniel Cárdenas
+Fecha de creación: 27/09/2023
+Descripción: Este script automatiza la extracción y procesamiento de datos desde la plataforma Bitrix24 y envía notificaciones a través de Skype en función de los resultados obtenidos. Los datos de llamadas de diferentes campañas se obtienen de Bitrix24 y se almacenan en una base de datos SQLite para su seguimiento y registro. Además, se notifica a los usuarios de Skype sobre las actualizaciones en tiempo real.
+"""
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
