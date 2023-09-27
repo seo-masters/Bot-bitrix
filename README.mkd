@@ -1,0 +1,72 @@
+# Documentación del Código
+
+Este documento proporciona una descripción y documentación del código Python proporcionado. El código realiza una serie de tareas relacionadas con la automatización de interacciones en un sitio web Bitrix24 y el envío de mensajes de Skype.
+
+## Resumen
+
+El código realiza las siguientes acciones:
+
+1. Inicia una sesión en Skype.
+2. Inicia una instancia de un navegador Chrome controlado por Selenium.
+3. Inicia sesión en Bitrix24.
+4. Realiza una serie de operaciones en Bitrix24 para recopilar datos.
+5. Almacena datos en una base de datos SQLite.
+6. Envía mensajes de Skype con información relevante.
+
+## Uso
+
+Para utilizar este código, asegúrese de tener instaladas las siguientes bibliotecas:
+
+- `selenium`: para la automatización del navegador web.
+- `skpy`: para interactuar con Skype.
+- `sqlite3`: para trabajar con la base de datos SQLite.
+
+Asegúrese también de tener el controlador de Chrome (`chromedriver.exe`) instalado en la ubicación adecuada y configurado en las opciones de Selenium.
+
+## Estructura del Código
+
+El código se divide en las siguientes secciones principales:
+
+1. **Configuración Inicial**: Importa las bibliotecas necesarias y establece algunas configuraciones iniciales.
+
+2. **Bucle Principal**: Se inicia un bucle infinito que ejecuta las tareas principales del programa en intervalos regulares (configurados en `intervalo_minutos`).
+
+3. **Conexión a la Base de Datos SQLite**: El código crea o conecta a una base de datos SQLite llamada 'bitrix_bot.db' y define una tabla 'leads' si no existe.
+
+4. **Inicio de Sesión en Skype**: Se inicia una sesión de Skype con las credenciales proporcionadas.
+
+5. **Inicio de Sesión en Bitrix24**: Se automatiza el proceso de inicio de sesión en la plataforma Bitrix24.
+
+6. **Recopilación de Datos**: Se recopilan datos relacionados con las llamadas en Bitrix24 y se almacenan en una base de datos SQLite. También se envían mensajes de Skype con información relevante.
+
+7. **Gestión de Errores**: Se incluye manejo de errores para garantizar la robustez del programa.
+
+8. **Cierre de Conexiones y Espera**: Se cierran las conexiones de base de datos y el navegador, y se espera durante el intervalo definido.
+
+## Diagrama
+
+A continuación se muestra un diagrama que representa la estructura del flujo de datos en el código:
+
+![Diagrama de Flujo](Diagrama.png)
+
+
+
+## Notas Adicionales
+
+- El código utiliza Selenium para interactuar con el navegador web Chrome y realizar acciones en Bitrix24.
+
+- La información de las empresas se almacena en un diccionario `lista_empresas`, donde la clave es el nombre de la empresa y el valor es la ID del chat de Skype correspondiente.
+
+- Se utiliza un bucle para buscar información de empresas en Bitrix24 y se filtran los datos relevantes.
+
+- Los resultados se almacenan en una base de datos SQLite llamada 'bitrix_bot.db' en la tabla 'leads'. Los registros se insertan en la base de datos si no existen previamente.
+
+- Los mensajes de Skype se envían a los chats correspondientes con información sobre las llamadas y los registros en la base de datos.
+
+## Conclusiones
+
+Este código automatiza la recopilación de datos de Bitrix24 y la notificación a través de Skype. Puede ser útil para la gestión de leads y el seguimiento de llamadas en un entorno empresarial.
+
+---
+
+*Nota: Este documento es una documentación general del código proporcionado. Para detalles específicos sobre su implementación y configuración, se recomienda consultar directamente el código fuente y los comentarios incluidos en él.*
