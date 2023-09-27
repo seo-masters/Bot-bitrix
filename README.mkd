@@ -1,4 +1,4 @@
-# Documentación del Código
+# Bot Bitrix
 
 Este documento proporciona una descripción y documentación del código Python proporcionado. El código realiza una serie de tareas relacionadas con la automatización de interacciones en un sitio web Bitrix24 y el envío de mensajes de Skype.
 
